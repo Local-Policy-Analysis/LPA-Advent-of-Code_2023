@@ -18,3 +18,4 @@ If you're new to github, a guide to collobrating (i.e. forking and commiting) ca
 
 Any other questions do let Daniel Rowan or Peter Brohan know
 
+*Please do feel free to improve the structure/resources of this repository
