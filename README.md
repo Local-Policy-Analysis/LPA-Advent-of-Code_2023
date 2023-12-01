@@ -9,6 +9,7 @@ This repository can act as a container for any LPA analysts with a github accoun
 ## To get started
 
 If this sounds like fun, the visit AoC's homepage at https://adventofcode.com/ and create an account to view the daily puzzles (published every day throughout December).
+Then you join the LPA team "lpa-advent-of-code-2023" so you can acces and maintain the AoC repository: https://github.com/orgs/Local-Policy-Analysis/teams/lpa-advent-of-code-2023 
 
 ## Using the repository 
 
