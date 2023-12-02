@@ -11,6 +11,7 @@ def parseCubes(game):
     out[s.strip().split(" ")[1]] = int(s.strip().split(" ")[0])
   return(out)
 
+# Part 1
 tot1 = 0
 
 for line in lines:
@@ -28,6 +29,7 @@ for line in lines:
   tot1 += valid
 print(tot1)
 
+# Part 2
 tot2 = 0
 
 for line in lines:
