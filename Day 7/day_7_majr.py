@@ -1,23 +1,30 @@
-# Using a comparator function from the old days...
+# An attempt to do it differently to Peter, currently failing
 
-lines = [line.rstrip().split() for line in open("inputs/day_7_pbr.txt")]
+lines = [line.rstrip().split() for line in open("inputs/day7_majr.txt")]
+ex = [['32T3K', '765'],['T55J5', '684'],['KK677', '28'],['KTJJT', '220'],['QQQJA', '483']]
 
-def handcardval(h):
+def carddiff(l,r):
     cardvals = "23456789TJQKA"
-    return int( ''.join( str(x) for x in [cardvals.index(c) for c in h[0]]))
+    try:
+        return [d for d in [cardvals.index(l[0][i]) - cardvals.index(r[0][i]) for i in range(5)] if d][0]
+    except IndexError:
+        return 0
 
 def cmp(l, r):
-    h = [l,r] #hands
-    u = [set(l[0]), set(r[0])] # unique cards /hand
-    ul = [len(u[0]),len(u[1])] # counts of unique cards /hand 
-    c = [max([hand[0].count(card) for card in hand[0]]) for hand in h] # counts of duplicates /hand (for toak vs 2pair)
-    bvc = [handcardval(l), handcardval(r)] # best value card /hand
-    return ul[0] != sum(ul)/2 and (ul.index(min(ul)) > 0 and -1 or 1)  or (ul[0] == 3 and c[0] != sum(c)/2) and (c.index(max(c)) > 0 and -1 or 1) or bvc[0] != sum(bvc)/2 and (bvc.index(max(bvc)) > 0 and -1 or 1) or 0
+    n = [len(set(l[0])),len(set(r[0]))] # counts of unique cards /hand 
+    d = [max([hand[0].count(card) for card in hand[0]]) for hand in [l,r]] # counts of duplicates /hand 
 
+    if n[0] != sum(n)/2: # types are different
+        return n.index(min(n)) > 0 and -1 or 1
+    elif (n[0] in [2,3]) and d[0] != sum(n)/2: # one is foak and one is fh OR one is toak and one is 2pair
+        return d.index(max(d)) > 0 and -1 or 1
+    else: # different card values or hands are the same
+        return carddiff(l,r)
 
 from functools import cmp_to_key as ck
 ranks = sorted(lines, key=ck(cmp))
 
+#print(ranks)
+
 print(sum([(i+1)*int(h[1]) for i,h in enumerate(ranks)])) 
-## Different answer to Peter's
 
