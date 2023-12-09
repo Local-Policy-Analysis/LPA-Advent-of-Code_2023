@@ -13,7 +13,7 @@ Then you join the LPA team "lpa-advent-of-code-2023" so you can acces and mainta
 
 ## Using the repository 
 
-Scripts can be written and stored in this repository - clone a copy onto your DAP and create a script in the relevent day's folder, then commit the change when your finished. The repo will be owned by LPA and pull requests can be approved by all members. Most challenges require an input of some kind, these will be placed in the input folder (if you're the first analyst to solve a day then please add this).
+Scripts can be written and stored in this repository - clone a copy onto your DAP and create a script in the relevent day's folder, then commit the change when your finished. The repo will be owned by LPA and pull requests can be approved by all members. Most challenges require an input of some kind, these will be placed in the input folder (inputs are unique per user, so please add your name into the input, e.g. `day_6_pbr.txt`). You might also want to use the test input, which should be called `day_x_test.txt`.
 
 If you're new to github, a guide to collobrating (i.e. cloning, forking and commiting) can be found here: https://docs.github.com/en/get-started/quickstart/hello-world 
 
