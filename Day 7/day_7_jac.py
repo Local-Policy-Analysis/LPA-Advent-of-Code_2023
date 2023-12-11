@@ -1,5 +1,4 @@
 import os
-from operator import itemgetter
 
 os.chdir('d:\\Users\\jcaddick\\github\\LPA-Advent-of-Code_2023\\Day 7')
 
