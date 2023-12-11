@@ -48,7 +48,7 @@ for node in start_nodes:
 def find_lcm(cycles):
     lcm = 1
     for c in cycles:
-        lcm = lcm * i // gcd(lcm, c)
+        lcm = lcm * c // gcd(lcm, c)
     return lcm
     
 print(find_lcm(cycle_lenghts))
