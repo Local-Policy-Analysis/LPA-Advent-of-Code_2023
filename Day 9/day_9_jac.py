@@ -16,6 +16,5 @@ def get_next(series):
     last_terms = [expanded[-1] for expanded in expanded_series]
     return series[-1] + sum(last_terms)
 
-
 print(sum(get_next(series) for series in data))
 print(sum(get_next(series[::-1]) for series in data))
