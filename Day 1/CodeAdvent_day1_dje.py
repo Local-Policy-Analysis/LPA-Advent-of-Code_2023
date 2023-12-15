@@ -8,7 +8,7 @@ input_list = []
 
 total = 0
 
-file_path = 'input_data_day1_dje.txt'
+file_path = '../inputs/day_1_dje.txt'
 with open(file_path, 'r') as file:
     for line in file:
         input_list.append(line.strip())

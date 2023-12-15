@@ -13,7 +13,7 @@ import math
 # test_array = np.array(pattern, dtype='str')
 
 #actual problem
-file_path = 'pattern_actual_dje.txt'
+file_path = '../inputs/day_10_dje.txt'
 with open(file_path, 'r') as file:
     lines = file.readlines()
 test_array = np.vstack([list(line.strip()) for line in lines])
