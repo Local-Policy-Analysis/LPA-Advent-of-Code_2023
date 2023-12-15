@@ -1,6 +1,6 @@
 import re
 
-with open('input_jac.txt') as f:
+with open('../inputs/input_jac.txt') as f:
     data = [d.strip() for d in f.readlines()]
     
 print(sum([int(re.findall(r'\d', row)[0] + re.findall(r'\d', row)[-1]) for row in data]))
