@@ -10,7 +10,7 @@
 # push these together
 # add the collection of pushed number
 
-input = readlines("Day 1/dr_input/input.txt")
+input = readlines("inputs/day_1_dr.txt")
 
 #Part1
 function part1(data)

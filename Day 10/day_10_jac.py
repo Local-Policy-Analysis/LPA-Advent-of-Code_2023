@@ -2,7 +2,7 @@ import os
 
 os.chdir('d:\\Users\\jcaddick\\github\\LPA-Advent-of-Code_2023\\Day 10')
 
-with open('input_jac.txt') as f:
+with open('../inputs/day_10_jac.txt') as f:
     data = [list(d.strip()) for d in f.readlines()]
     
 def get_start(input):
