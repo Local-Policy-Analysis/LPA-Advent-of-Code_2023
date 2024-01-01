@@ -1,5 +1,4 @@
 import os
-import numpy as np
 
 os.chdir('d:\\Users\\jcaddick\\github\\LPA-Advent-of-Code_2023\\Day 15')
 
