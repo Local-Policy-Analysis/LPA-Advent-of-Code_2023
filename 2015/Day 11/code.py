@@ -1,12 +1,13 @@
 import string
-data = 'hxbxwxba'
+import re
+
+# data = 'hxbxwxba'
+data = 'hxbxxyzz'
 
 num_to_str = {n:c for n, c in zip(range(26), string.ascii_lowercase)}
 str_to_num = {c:n for n, c in zip(range(26), string.ascii_lowercase)}
 
-# must have at least 1 run of 3 consecutive letters
-# must not contain 1, o, or l
-# must have at least 2 non-overlapping pairs of letters
+consecutive = [string.ascii_lowercase[i: i+3] for i, s in enumerate(string.ascii_lowercase[:-2])]
 
 def increment(in_str):
     out_str = in_str
@@ -23,4 +24,18 @@ def increment(in_str):
                 out_str = in_str[:-(i + 1)] + 'a' + out_str[-i:]
         
 def check(in_str):
-    pass
+    if any(['i' in in_str, 'o' in in_str, 'l' in in_str]):
+        return False
+    elif len(re.findall(r'(.)\1{1}', in_str)) < 2:
+        return False
+    else:
+        for c in consecutive:
+            if c in in_str:
+                return True
+    return False
+
+data = increment(data)
+while not check(data):
+    data = increment(data)
+    
+print(data)
