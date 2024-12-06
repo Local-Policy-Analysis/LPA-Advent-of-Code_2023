@@ -108,7 +108,7 @@ fn comparenums(a: &i32, b: &i32, predecessors: &HashMap<i32, Vec<i32>>, successo
     let in_pred = predecessors.contains_key(b);
     if in_succ && successors[a].contains(b){
         return Ordering::Greater
-    } else if in_pred && predecessors[b].contains(b){
+    } else if in_pred && predecessors[b].contains(a){
     // if a is a predecessor of b
         return Ordering::Greater
     } else {
