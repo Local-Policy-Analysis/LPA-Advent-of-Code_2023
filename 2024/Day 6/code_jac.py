@@ -1,4 +1,3 @@
-import sys
 import numpy as np
 
 with open('input_jac.txt') as f:
