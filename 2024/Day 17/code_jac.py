@@ -37,7 +37,6 @@ while pointer < len(opcodes):
         combo[6] = int(combo[4] / 2 ** operand)
     if opcode != 3:
         pointer += 2
-    print(f'{opcode=} {operand=} {pointer=} {bin(combo[4])} {bin(combo[5])} {bin(combo[6])}')
     
 print(','.join(outputs))
 
